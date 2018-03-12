@@ -8,14 +8,22 @@ Checklist básico para garantir que seu tema está de acordo com as instruções
 -   `comments.php`
 -   `screenshot.png`
 -   `style.css`
+-   `functions.php`
+    - `add_theme_support('post-thumbnails')`
+    - `register_post_type('slug-post-type', $args);`
+    - `register_nav_menu('slug-menu', 'nome-menu');`
+-   `header.php`
+    - `wp_head`
+    - `wp_nav_menu($args);`
+    - `<title><?php function geraTitle() { bloginfo ('name'); if( !is_home() ) echo ' | '; the_title(); } geraTitle(); ?> </title>`
+-   `footer.php`
 
 **Recomendados**
+-   `single.php` (página de cada post)
+-   `page.php` (página de cada página)
 -   `404.php`
 -   `archive.php`
--   `page.php`
 -   `search.php`
--   `header.php`
--   `footer.php`
 -   `sidebar.php`
 
 **Opcionais:**
@@ -27,7 +35,7 @@ Checklist básico para garantir que seu tema está de acordo com as instruções
 -   `image.php`
 -   `tag.php`
 
-## Hooks  e Template Tags:
+## Hooks e Template Tags:
 
 -   `wp_head()`
 -   `body_class()`
